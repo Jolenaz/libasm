@@ -16,7 +16,9 @@ SRCS =	ft_isdigit.s \
 		ft_isalpha.s \
 		ft_toupper.s \
 		ft_tolower.s \
-		ft_bzero.s
+		ft_bzero.s \
+		ft_strlen.s \
+		ft_puts.s
 
 OBJS =	$(patsubst %.s,%.o,$(SRCS))
 

@@ -120,74 +120,125 @@
     }
 //
 
-int isBzeroOk()
-{
-    char *j = malloc(11);
-    int i = 0;
-    while (i < 10)
+// bzero
+    int isBzeroOk()
     {
-        j[i] = '0' + i;
-        i++;
-    }
-    j[10] = 0;
-    ft_bzero(j, 0);
-    if (strcmp("0123456789", j))
-        return (0);
-    ft_bzero(j,2);
-    if (j[0] != 0 || j[1] != 0 || j[2] != '2')
-        return (0);
-    ft_bzero(j,10);
-    for (int k = 0; k < 10; k++)
-    {
-        if (j[k] != 0)
+        char *j = malloc(11);
+        int i = 0;
+        while (i < 10)
+        {
+            j[i] = '0' + i;
+            i++;
+        }
+        j[10] = 0;
+        ft_bzero(j, 0);
+        if (strcmp("0123456789", j))
             return (0);
+        ft_bzero(j,2);
+        if (j[0] != 0 || j[1] != 0 || j[2] != '2')
+            return (0);
+        ft_bzero(j,10);
+        for (int k = 0; k < 10; k++)
+        {
+            if (j[k] != 0)
+                return (0);
+        }
+        return (1);
     }
-    return (1);
-}
+//
+
+//strlen
+    int isStrlenOK()
+    {
+        char *str = "";
+        char *str1 = "rtdfyghjk faegzyufhjkW:LD";
+        char *str2 = "453zb4s6\n\te\r\\";
+        char *str3 = "!@#$^&*()\n";
+
+        size_t a, b; 
+        int ret = 1;
+        if ((a = strlen(str)) != (b = ft_strlen(str)))
+        {
+            printf ("%lu\n",a);
+            printf ("%lu\n",b);
+            ret = 0;
+        }
+
+        if ((a = strlen(str1)) != (b = ft_strlen(str1)))
+        {
+            printf ("%lu\n",a);
+            printf ("%lu\n",b);
+            ret = 0;
+        }
+
+        if ((a = strlen(str2)) != (b = ft_strlen(str2)))
+        {
+            printf ("%lu\n",a);
+            printf ("%lu\n",b);
+            ret = 0;
+            
+        }
+
+        if ((a = strlen(str3)) != (b = ft_strlen(str3)))
+        {
+            printf ("%lu\n",a);
+            printf ("%lu\n",b);
+            ret = 0;
+        }
+        return ret;
+    }
+//
 
 int main()
 {
-    printf("Bonjour Main Test\n");
+    ft_puts("Bonjour Main Test\n");
+
 // test is_functions
     if (isDigitOk())
-        printf("    ft_isdigit: OK\n");
+        ft_puts("    ft_isdigit: OK\n");
     else
-        printf("    ft_isdigit: NOT OK\n");
+        ft_puts("    ft_isdigit: NOT OK\n");
     if (isAsciiOk())
-        printf("    ft_isascii: OK\n");
+        ft_puts("    ft_isascii: OK\n");
     else
-        printf("    ft_isascii: NOT OK\n");
+        ft_puts("    ft_isascii: NOT OK\n");
     if (isAlphaOk())
-        printf("    ft_isalpha: OK\n");
+        ft_puts("    ft_isalpha: OK\n");
     else
-        printf("    ft_isalpha: NOT OK\n");
+        ft_puts("    ft_isalpha: NOT OK\n");
     if (isPrintOk())
-        printf("    ft_isprint: OK\n");
+        ft_puts("    ft_isprint: OK\n");
     else
-        printf("    ft_isprint: NOT OK\n");
+        ft_puts("    ft_isprint: NOT OK\n");
     if (isAlnumOk())
-        printf("    ft_isalnum: OK\n");
+        ft_puts("    ft_isalnum: OK\n");
     else
-        printf("    ft_isalnum: NOT OK\n");
+        ft_puts("    ft_isalnum: NOT OK\n");
 //
 
 // to_upper_lower
     if (isToupperOk())
-        printf("    ft_toupper: OK\n");
+        ft_puts("    ft_toupper: OK\n");
     else 
-        printf("    ft_toupper: NOT OK\n");
+        ft_puts("    ft_toupper: NOT OK\n");
     if (isTolowerOk())
-        printf("    ft_tolower: OK\n");
+        ft_puts("    ft_tolower: OK\n");
     else
-        printf("    ft_tolower: NOT OK\n");
+        ft_puts("    ft_tolower: NOT OK\n");
 //
 
 // bzero
     if (isBzeroOk())
-        printf("    ft_bzero: OK\n");
+        ft_puts("    ft_bzero: OK\n");
     else
-        printf("    ft_bzero: NOT OK\n");
+        ft_puts("    ft_bzero: NOT OK\n");
 //
 
+// strlen
+    if (isStrlenOK())
+        ft_puts("    ft_strlen: OK\n");
+    else
+        ft_puts("    ft_strlen: NOT OK\n");
+//
     return (0);
 }

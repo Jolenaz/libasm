@@ -14,4 +14,6 @@ int ft_tolower(int val);
 
 void ft_bzero(char *str, size_t n);
 
+size_t  ft_strlen(char* str);
+void    ft_puts(char *str);
 #endif
