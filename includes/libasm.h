@@ -16,4 +16,7 @@ void ft_bzero(char *str, size_t n);
 
 size_t  ft_strlen(char* str);
 void    ft_puts(char *str);
+
+char    *ft_strcpy(char *dst, char *src);
+char    *ft_strcat(char *dst, char *src);
 #endif

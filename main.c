@@ -189,6 +189,32 @@
     }
 //
 
+//strcpy strcat
+    int isStrcatOK()
+    {    
+        char *src = "Bonjour monde ";
+        char *src2 = "\n";
+        char *dst_ft = malloc(1000);
+        char *dst = malloc(1000);
+
+        ft_strcpy(dst_ft, src);
+        ft_strcat(dst_ft, src);
+        ft_strcat(dst_ft, src);
+        ft_strcat(dst_ft, src);
+        ft_strcat(dst_ft, src2);
+
+        strcpy(dst, src);
+        strcat(dst, src);
+        strcat(dst, src);
+        strcat(dst, src);
+        strcat(dst, src2);
+
+        if (strcmp(dst_ft, dst))
+            return (0);
+        return 1;
+    }
+//
+
 int main()
 {
     ft_puts("Bonjour Main Test\n");
@@ -239,6 +265,16 @@ int main()
         ft_puts("    ft_strlen: OK\n");
     else
         ft_puts("    ft_strlen: NOT OK\n");
+//
+
+//  strcpy strcat
+    if (!isStrcatOK())
+        ft_puts("Error : ft_strcat or ft_strcpy\n");
+    else
+    {
+        ft_puts("    ft_strcpy: OK\n");
+        ft_puts("    ft_strcat: OK\n");
+    }
 //
     return (0);
 }
