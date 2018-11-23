@@ -265,78 +265,78 @@
 
 int main()
 {
-    ft_puts("Bonjour Main Test\n");
+    int ret = ft_puts("Bonjour Main Test");
 
 // test is_functions
     if (isDigitOk())
-        ft_puts("    ft_isdigit: OK\n");
+        ft_puts("    ft_isdigit: OK");
     else
-        ft_puts("    ft_isdigit: NOT OK\n");
+        ft_puts("    ft_isdigit: NOT OK");
     if (isAsciiOk())
-        ft_puts("    ft_isascii: OK\n");
+        ft_puts("    ft_isascii: OK");
     else
-        ft_puts("    ft_isascii: NOT OK\n");
+        ft_puts("    ft_isascii: NOT OK");
     if (isAlphaOk())
-        ft_puts("    ft_isalpha: OK\n");
+        ft_puts("    ft_isalpha: OK");
     else
-        ft_puts("    ft_isalpha: NOT OK\n");
+        ft_puts("    ft_isalpha: NOT OK");
     if (isPrintOk())
-        ft_puts("    ft_isprint: OK\n");
+        ft_puts("    ft_isprint: OK");
     else
-        ft_puts("    ft_isprint: NOT OK\n");
+        ft_puts("    ft_isprint: NOT OK");
     if (isAlnumOk())
-        ft_puts("    ft_isalnum: OK\n");
+        ft_puts("    ft_isalnum: OK");
     else
-        ft_puts("    ft_isalnum: NOT OK\n");
+        ft_puts("    ft_isalnum: NOT OK");
 //
 
 // to_upper_lower
     if (isToupperOk())
-        ft_puts("    ft_toupper: OK\n");
+        ft_puts("    ft_toupper: OK");
     else 
-        ft_puts("    ft_toupper: NOT OK\n");
+        ft_puts("    ft_toupper: NOT OK");
     if (isTolowerOk())
-        ft_puts("    ft_tolower: OK\n");
+        ft_puts("    ft_tolower: OK");
     else
-        ft_puts("    ft_tolower: NOT OK\n");
+        ft_puts("    ft_tolower: NOT OK");
 //
 
 // bzero
     if (isBzeroOk())
-        ft_puts("    ft_bzero: OK\n");
+        ft_puts("    ft_bzero: OK");
     else
-        ft_puts("    ft_bzero: NOT OK\n");
+        ft_puts("    ft_bzero: NOT OK");
 //
 
 // strlen
     if (isStrlenOK())
-        ft_puts("    ft_strlen: OK\n");
+        ft_puts("    ft_strlen: OK");
     else
-        ft_puts("    ft_strlen: NOT OK\n");
+        ft_puts("    ft_strlen: NOT OK");
 //
 
 //  strcpy strcat
     if (!isStrcatOK())
-        ft_puts("Error : ft_strcat or ft_strcpy\n");
+        ft_puts("Error : ft_strcat or ft_strcpy");
     else
     {
-        ft_puts("    ft_strcpy: OK\n");
-        ft_puts("    ft_strcat: OK\n");
+        ft_puts("    ft_strcpy: OK");
+        ft_puts("    ft_strcat: OK");
     }
 //
 
 // memest
     if (isMemsetOk())
-        ft_puts("    ft_memset: OK\n");
+        ft_puts("    ft_memset: OK");
     else
-        ft_puts("    ft_memset: NOT OK\n");
+        ft_puts("    ft_memset: NOT OK");
 //
 
 // memcpy
     if (isMemcpyOk())
-        ft_puts("    ft_memcpy: OK\n");
+        ft_puts("    ft_memcpy: OK");
     else
-        ft_puts("    ft_memcpy: NOT OK\n");
+        ft_puts("    ft_memcpy: NOT OK");
 //
 
     return (0);

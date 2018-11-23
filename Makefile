@@ -1,7 +1,7 @@
 
 ##Library
 
-NAME=libft.a
+NAME=libfts.a
 .PHONY: clean fclean libft re
 .DEFAULT_GOAL: libft
 
@@ -22,7 +22,8 @@ SRCS =	ft_isdigit.s \
 		ft_strcpy.s \
 		ft_strcat.s \
 		ft_memset.s \
-		ft_memcpy.s
+		ft_memcpy.s \
+		ft_strdup.s
 
 OBJS =	$(patsubst %.s,%.o,$(SRCS))
 
@@ -30,7 +31,7 @@ RED=\033[0;31m
 GREEN=\033[0;32m
 NC=\033[0m
 
-libft: $(NAME)
+all: $(NAME)
 
 test: libft mainTest
 	@rm -rf main.o
@@ -38,7 +39,7 @@ test: libft mainTest
 
 mainTest: main.o
 	@echo "$(GREEN) Compile and Run $@ $(NC)";
-	@gcc -g -Wall -Werror -Wextra main.o -I. -lft -L. -o mainTest
+	@gcc -g -Wall -Werror -Wextra main.o -I. -lfts -L. -o mainTest
 
 main.o: main.c
 	@gcc -g -c main.c -o main.o -I.
@@ -62,4 +63,4 @@ fclean: clean
 	rm -rf $(NAME)
 	@echo "$(NC)"
 
-re: fclean libft
+re: fclean all
