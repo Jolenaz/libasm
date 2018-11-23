@@ -21,7 +21,8 @@ SRCS =	ft_isdigit.s \
 		ft_puts.s \
 		ft_strcpy.s \
 		ft_strcat.s \
-		ft_memset.s
+		ft_memset.s \
+		ft_memcpy.s
 
 OBJS =	$(patsubst %.s,%.o,$(SRCS))
 

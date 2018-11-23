@@ -21,5 +21,6 @@ char    *ft_strcpy(char *dst, char *src);
 char    *ft_strcat(char *dst, char *src);
 
 void    *ft_memset(void *b, int c, size_t len);
+void    *ft_memcpy(void *dst, void *src, size_t len);
 
 #endif

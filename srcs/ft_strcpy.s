@@ -6,6 +6,7 @@ _ft_strcpy:
     push    rdi
     push    rcx
     push    r11
+    push    rsi
 
     mov     r11, rdi
     mov     rdi, rsi
@@ -19,6 +20,7 @@ _ft_strcpy:
 
     rep     movsb
 
+    pop     rsi
     pop     r11
     pop     rcx
     pop     rdi

@@ -234,6 +234,35 @@
     }
 //
 
+//memcpy
+    typedef struct s_list{
+    int i;
+    float   k;
+    char    *str;
+
+    }               t_list;
+
+    int isMemcpyOk()
+    {
+        t_list src;
+        src.i = 145;
+        src.k = 0.45641f;
+        src.str = "fghyjuikolp523457";
+        size_t len = sizeof(t_list);
+        void *dst_ft = malloc(len);
+        void *dst = malloc(len);
+
+        if (dst_ft != ft_memcpy(dst_ft, (void*)&src, len))
+           return (0);
+        memcpy(dst, (void*)&src, len);
+
+        if (memcmp(dst_ft, dst, len))
+            return (0);
+
+        return (1);
+    }
+//
+
 int main()
 {
     ft_puts("Bonjour Main Test\n");
@@ -301,6 +330,13 @@ int main()
         ft_puts("    ft_memset: OK\n");
     else
         ft_puts("    ft_memset: NOT OK\n");
+//
+
+// memcpy
+    if (isMemcpyOk())
+        ft_puts("    ft_memcpy: OK\n");
+    else
+        ft_puts("    ft_memcpy: NOT OK\n");
 //
 
     return (0);
