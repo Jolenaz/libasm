@@ -5,6 +5,8 @@
 void    ft_puts(char *ptr);
 char    *ft_strcpy(char *dst, char *src);
 char    *ft_strcat(char *dst, char *src);
+void    *ft_memset(void *b, int c, size_t len);
+
 
 int main()
 {
@@ -14,24 +16,16 @@ int main()
     char *dst = malloc(1000);
 
     ft_strcpy(dst_ft, src);
-    ft_strcat(dst_ft, src);
-    ft_strcat(dst_ft, src);
-    ft_strcat(dst_ft, src);
     ft_strcat(dst_ft, src2);
-
     strcpy(dst, src);
-    strcat(dst, src);
-    strcat(dst, src);
-    strcat(dst, src);
     strcat(dst, src2);
+    if (dst_ft != ft_memset((void*)dst_ft, 'i', 4))
+        return(0);
 
-    if (strcmp(dst_ft, dst))
-        ft_puts("Error : ft_strcat or ft_strcpy");
-    else
-    {
-        ft_puts("    ft_strcpy: OK\n");
-        ft_puts("    ft_strcat: OK\n");
-    }
+    if (strcmp(dst_ft, memset(dst, 'i', 4) ))
+        return (0);
+
+    ft_puts(dst_ft);
 
     return (0);
 }

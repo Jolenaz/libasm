@@ -215,6 +215,25 @@
     }
 //
 
+//memset
+    int isMemsetOk(){
+        char *src = "Bonjour monde ";
+        char *src2 = "\n";
+        char *dst_ft = malloc(1000);
+        char *dst = malloc(1000);
+
+        ft_strcpy(dst_ft, src);
+        ft_strcat(dst_ft, src2);
+        strcpy(dst, src);
+        strcat(dst, src2);
+        if (dst_ft != ft_memset((void*)dst_ft, 654, 4))
+            return(0);
+        if (strcmp(dst_ft, memset(dst, 654, 4) ))
+            return (0);
+        return (1);
+    }
+//
+
 int main()
 {
     ft_puts("Bonjour Main Test\n");
@@ -276,5 +295,13 @@ int main()
         ft_puts("    ft_strcat: OK\n");
     }
 //
+
+// memest
+    if (isMemsetOk())
+        ft_puts("    ft_memset: OK\n");
+    else
+        ft_puts("    ft_memset: NOT OK\n");
+//
+
     return (0);
 }

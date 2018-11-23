@@ -19,4 +19,7 @@ void    ft_puts(char *str);
 
 char    *ft_strcpy(char *dst, char *src);
 char    *ft_strcat(char *dst, char *src);
+
+void    *ft_memset(void *b, int c, size_t len);
+
 #endif
