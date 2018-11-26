@@ -3,10 +3,10 @@
 
 
 section .text
-    global      _ft_puts
+    global      _ft_putstr
     extern      _ft_strlen
 
-_ft_puts:
+_ft_putstr:
     push        rdx
     push        rsi
     push        rdi
@@ -19,17 +19,7 @@ _ft_puts:
     mov         rdi, 1
     syscall
 
-    lea         rsi, [rel message]
-    mov         rdx, 1
-    mov         rdi, 1
-    mov         rax, WRITE
-    syscall
-
     pop         rdi
     pop         rsi
     pop         rdx
     ret
-
-
-section   .data
-message:  db  10

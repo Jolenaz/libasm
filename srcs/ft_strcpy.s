@@ -5,10 +5,10 @@ section .text
 _ft_strcpy:
     push    rdi
     push    rcx
-    push    r11
+    push    r12
     push    rsi
 
-    mov     r11, rdi
+    mov     r12, rdi
     mov     rdi, rsi
 
     call    _ft_strlen
@@ -16,12 +16,12 @@ _ft_strcpy:
     mov     rcx, rax
     add     rcx, 0x1
     mov     rsi, rdi
-    mov     rdi, r11
+    mov     rdi, r12
 
     rep     movsb
 
     pop     rsi
-    pop     r11
+    pop     r12
     pop     rcx
     pop     rdi
     mov     rax, rdi
