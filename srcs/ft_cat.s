@@ -31,6 +31,7 @@ test_while:
     mov     rdx, STR_SIZE
     mov     rax, READ
     syscall
+    jb     end_while
     cmp     rax, 0x0
     jle     end_while
 
