@@ -11,6 +11,11 @@ _ft_puts:
     push        rsi
     push        rdi
 
+    cmp         rdi, 0x0
+    jne         args_ok
+    lea         rdi, [rel error]
+
+args_ok:
     call        _ft_strlen
 
     mov         rdx, rax
@@ -25,6 +30,15 @@ _ft_puts:
     mov         rax, WRITE
     syscall
 
+    jb          end_fail 
+
+    mov         rax, 10
+    jmp         end
+
+end_fail:
+    mov         rax, -1
+
+end:
     pop         rdi
     pop         rsi
     pop         rdx
@@ -33,3 +47,4 @@ _ft_puts:
 
 section   .data
 message:  db  10
+error:    db "(null)",0

@@ -263,7 +263,7 @@
     }
 //
 
-int main()
+int main(int ac, char **av)
 {
     int ret = ft_puts("Bonjour Main Test");
 

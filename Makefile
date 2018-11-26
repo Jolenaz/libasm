@@ -35,9 +35,17 @@ NC=\033[0m
 
 all: $(NAME)
 
-test: libft mainTest
+test: all mainTest ft_cat
 	@rm -rf main.o
+	@rm -rf ft_cat.o
 	@./mainTest
+
+ft_cat:	ft_cat.o
+	@echo "$(GREEN) Compile $@ $(NC)";
+	@gcc -g -Wall -Werror -Wextra ft_cat.o -I. -lfts -L. -o ft_cat
+
+ft_cat.o: ft_cat.c
+	@gcc -g -c ft_cat.c -o ft_cat.o -I.
 
 mainTest: main.o
 	@echo "$(GREEN) Compile and Run $@ $(NC)";

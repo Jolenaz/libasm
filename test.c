@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 
-void     ft_cat();
+void     ft_cat(int fd);
 
 int main()
 {
