@@ -263,6 +263,94 @@
     }
 //
 
+//strcmp
+    int isStrcmpOk()
+    {
+        char* str1 = "0123";
+        char* str2 = "";
+        char* str3 = "0123014";
+        int ret = 1;
+
+        if (strcmp(str1 ,str2) != ft_strcmp(str1, str2)){
+            printf("eror ft_strcmp : %s %s\n",str1,str2);
+            ret = 0;
+        }
+        if (strcmp(str1 ,str3) != ft_strcmp(str1, str3)){
+            printf("eror ft_strcmp : %s %s\n",str1,str3);
+            ret = 0;
+        }
+        if (strcmp(str3 ,str2) != ft_strcmp(str3, str2)){
+            printf("eror ft_strcmp : %s %s\n",str3,str2);
+            ret = 0;
+        }
+        if (strcmp(str2 ,str2) != ft_strcmp(str2, str2)){
+            printf("eror ft_strcmp : %s %s\n",str2,str2);
+            ret = 0;
+        }
+        return (ret);
+    }
+//
+
+//memcmp
+    int isMemcmpOk()
+    {
+        char* str1 = "0123";
+        char* str2 = "";
+        char* str3 = "0123014";
+        int ret = 1;
+
+        if (memcmp(str1 ,str2, 10) != ft_memcmp(str1, str2, 10)){
+            printf("eror ft_memcmp : %s %s %d\n",str1,str2,10);
+            ret = 0;
+        }
+        if (memcmp(str1 ,str3, 10) != ft_memcmp(str1, str3, 10)){
+            printf("eror ft_memcmp : %s %s %d\n",str1,str3,10);
+            ret = 0;
+        }
+        if (memcmp(str3 ,str2, 10) != ft_memcmp(str3, str2, 10)){
+            printf("eror ft_memcmp : %s %s %d\n",str3,str2,10);
+            ret = 0;
+        }
+        if (memcmp(str2 ,str2, 10) != ft_memcmp(str2, str2, 10)){
+            printf("eror ft_memcmp : %s %s %d\n",str2,str2,10);
+            ret = 0;
+        }
+        if (memcmp(str1 ,str2, 0) != ft_memcmp(str1, str2, 0)){
+            printf("eror ft_memcmp : %s %s %d\n",str1,str2,0);
+            ret = 0;
+        }
+        if (memcmp(str1 ,str3, 0) != ft_memcmp(str1, str3, 0)){
+            printf("eror ft_memcmp : %s %s %d\n",str1,str3,0);
+            ret = 0;
+        }
+        if (memcmp(str3 ,str2, 0) != ft_memcmp(str3, str2, 0)){
+            printf("eror ft_memcmp : %s %s %d\n",str3,str2,0);
+            ret = 0;
+        }
+        if (memcmp(str2 ,str2, 0) != ft_memcmp(str2, str2, 0)){
+            printf("eror ft_memcmp : %s %s %d\n",str2,str2,0);
+            ret = 0;
+        }
+        if (memcmp(str1 ,str2, 6) != ft_memcmp(str1, str2, 6)){
+            printf("eror ft_memcmp : %s %s %d\n",str1,str2,6);
+            ret = 0;
+        }
+        if (memcmp(str1 ,str3, 6) != ft_memcmp(str1, str3, 6)){
+            printf("eror ft_memcmp : %s %s %d\n",str1,str3,6);
+            ret = 0;
+        }
+        if (memcmp(str3 ,str2, 6) != ft_memcmp(str3, str2, 6)){
+            printf("eror ft_memcmp : %s %s %d\n",str3,str2,6);
+            ret = 0;
+        }
+        if (memcmp(str2 ,str2, 6) != ft_memcmp(str2, str2, 6)){
+            printf("eror ft_memcmp : %s %s %d\n",str2,str2,6);
+            ret = 0;
+        }
+        return (ret);
+    }
+//
+
 int main(int ac, char **av)
 {
     int ret = ft_puts("Bonjour Main Test");
@@ -337,6 +425,20 @@ int main(int ac, char **av)
         ft_puts("    ft_memcpy: OK");
     else
         ft_puts("    ft_memcpy: NOT OK");
+//
+
+// strcmp
+    if (isStrcmpOk())
+        ft_puts("    ft_strcmp: OK");
+    else
+        ft_puts("    ft_strcmp: NOT OK");
+//
+
+// strcmp
+    if (isMemcmpOk())
+        ft_puts("    ft_memcmp: OK");
+    else
+        ft_puts("    ft_memcmp: NOT OK");
 //
 
     return (0);
