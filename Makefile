@@ -9,23 +9,24 @@ INC_PATH=includes
 SRCS_PATH=srcs
 OBJS_PATH=objects
 
-SRCS =	ft_isdigit.s \
-		ft_isascii.s \
-		ft_isprint.s \
-		ft_isalnum.s \
-		ft_isalpha.s \
-		ft_toupper.s \
-		ft_tolower.s \
-		ft_bzero.s \
-		ft_strlen.s \
-		ft_puts.s \
+SRCS =	ft_isdigit.s	\
+		ft_isascii.s	\
+		ft_isprint.s	\
+		ft_isalnum.s	\
+		ft_isalpha.s	\
+		ft_toupper.s	\
+		ft_tolower.s	\
+		ft_bzero.s	\
+		ft_strlen.s	\
+		ft_puts.s	\
 		ft_putstr.s \
 		ft_strcpy.s \
 		ft_strcat.s \
 		ft_memset.s \
 		ft_memcpy.s \
 		ft_strdup.s \
-		ft_cat.s
+		ft_cat.s	\
+		ft_strcmp.s
 
 OBJS =	$(patsubst %.s,%.o,$(SRCS))
 
