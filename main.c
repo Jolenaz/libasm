@@ -351,6 +351,37 @@
     }
 //
 
+// strchr
+    int isStrchrOk()
+    {
+        char* str3 = "0123014";
+        int    c0 = '3';
+        int    c1 = 0x153700 | '3';
+        int    c2 = 0;
+        int    c3 = '4';
+        int    c4 = '5';
+        int    ret = 1;
+
+        if (ft_strchr(str3,c0) != strchr(str3,c0)){
+            ret = 0;
+            printf("%s, %c\n",str3,c0);}
+        if (ft_strchr(str3,c1) != strchr(str3,c1)){
+            ret = 0;
+            printf("%s, %c\n",str3,c1);}
+        if (ft_strchr(str3,c2) != strchr(str3,c2)){
+            ret = 0;
+            printf("%s, %c\n",str3,c2);}
+        if (ft_strchr(str3,c3) != strchr(str3,c3)){
+            ret = 0;
+            printf("%s, %c\n",str3,c3);}
+        if (ft_strchr(str3,c4) != strchr(str3,c4)){
+            ret = 0;
+            printf("%s, %c\n",str3,c4);}
+
+        return (ret);
+    }
+//
+
 int main(int ac, char **av)
 {
     int ret = ft_puts("Bonjour Main Test");
@@ -439,6 +470,13 @@ int main(int ac, char **av)
         ft_puts("    ft_memcmp: OK");
     else
         ft_puts("    ft_memcmp: NOT OK");
+//
+
+// strchr
+    if (isStrchrOk())
+        ft_puts("    ft_strchr: OK");
+    else
+        ft_puts("    ft_strchr: NOT OK");
 //
 
     return (0);

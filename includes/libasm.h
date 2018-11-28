@@ -31,4 +31,6 @@ void    ft_cat(int fd);
 int    ft_strcmp(char*s1, char*s2);
 int    ft_memcmp(void*s1, void*s2, size_t n);
 
+char    *ft_strchr(char*s, int c);
+
 #endif

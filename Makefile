@@ -27,7 +27,8 @@ SRCS =	ft_isdigit.s	\
 		ft_strdup.s \
 		ft_cat.s	\
 		ft_strcmp.s	\
-		ft_memcmp.s
+		ft_memcmp.s	\
+		ft_strchr.s
 
 OBJS =	$(patsubst %.s,%.o,$(SRCS))
 
