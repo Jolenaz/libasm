@@ -297,8 +297,14 @@
         char* str1 = "0123";
         char* str2 = "";
         char* str3 = "0123014";
+        char* str4 = "\200";
+        char* str5 = "\0";
         int ret = 1;
-
+        
+        if (memcmp(str4 ,str5, 1) != ft_memcmp(str4, str5, 1)){
+            printf("eror ft_memcmp : %s %s %d\n",str4,str5,1);
+            ret = 0;
+        }
         if (memcmp(str1 ,str2, 10) != ft_memcmp(str1, str2, 10)){
             printf("eror ft_memcmp : %s %s %d\n",str1,str2,10);
             ret = 0;
